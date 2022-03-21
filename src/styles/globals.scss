@@ -1,0 +1,25 @@
+@import "variables";
+@import "typography";
+@import "./pages/AdvancedAnalysis.scss";
+
+body {
+    font-size: 16px;
+    font-family: "Plus Jakarta Display", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: map-get($colors, "lightgray");
+    padding-top: 90px;
+    overflow-x: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1570px;
+}
+
+h2 {
+    font-size: map-get($font-size, "large");
+}
+
+h4 {
+    font-size: map-get($font-size, "base-lg");
+}
