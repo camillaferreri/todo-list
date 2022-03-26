@@ -11,10 +11,11 @@ export default {
   }
 };
 
-const Template: ComponentStory<typeof NewTaskModal> = ({  ...rest }) => {
-  return <NewTaskModal open={true} {...rest} />;
+const Template: ComponentStory<typeof NewTaskModal> = ({ ...rest }) => {
+  return <NewTaskModal {...rest} />;
 };
 
 export const ExampleStory = Template.bind({});
 ExampleStory.args= {
+  open: true
 };
