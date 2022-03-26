@@ -1,4 +1,4 @@
-import { IconType } from "../Icon";
+import { IconType } from "../Icon/Icon.types";
 
 export interface Button {
   label?: string;

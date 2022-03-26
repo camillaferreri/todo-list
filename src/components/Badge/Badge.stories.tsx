@@ -5,13 +5,18 @@ import { Badge } from '.';
 export default {
   title: 'Badge',
   component: Badge,
+  argTypes: {
+    preset: {
+      control: { type: 'select' }
+    },
+  },
 };
 
-const Template: ComponentStory<typeof Badge> = ({ checked, ...rest }) => {
-  return <Badge checked={checked} {...rest} />;
+const Template: ComponentStory<typeof Badge> = ({ preset, ...rest }) => {
+  return <Badge preset={preset} {...rest} >2/5</Badge>;
 };
 
 export const ExampleStory = Template.bind({});
 ExampleStory.args= {
-  checked: false,
+  preset: "lightBlue"
 };

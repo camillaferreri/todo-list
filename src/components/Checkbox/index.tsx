@@ -1,9 +1,6 @@
-import "./Checkbox.scss"
+import { CheckboxProps } from "./Checkbox.types"
 
-interface CheckboxProps {
-  checked: boolean,
-  onChange?: () => void
-}
+import "./Checkbox.scss"
 
 export const Checkbox = ({ checked, onChange }: CheckboxProps) => {
   return (

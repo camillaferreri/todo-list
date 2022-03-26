@@ -1,9 +1,6 @@
-import "./Toggle.scss"
+import { ToggleProps } from "./Toogle.types"
 
-interface ToggleProps {
-  checked: boolean,
-  onChange?: () => void
-}
+import "./Toggle.scss"
 
 export const Toggle = ({ checked, onChange }: ToggleProps) => {
   return (

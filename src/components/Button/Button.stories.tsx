@@ -1,12 +1,32 @@
-import React from 'react';
+import { ComponentStory } from '@storybook/react';
 
 import { Button } from './';
 
 export default {
   title: 'Button',
   component: Button,
+  argTypes: {
+    onClick: { control: false },
+    className: { control: false },
+  }
 };
 
-// export const Addsuccess = () => <Button>Add</Button>;
-// export const AddDisabled = () => <Button>Add</Button>;
-// export const AddHover = () => <Button >Add</Button>;
+const Template: ComponentStory<typeof Button> = ({ label, icon, preset, disabled, ...rest }) => {
+  return (
+    <Button 
+      label={label}
+      icon={icon}
+      preset={preset}
+      disabled={disabled}
+      {...rest} 
+    />
+  );
+};
+
+export const ExampleStory = Template.bind({});
+ExampleStory.args= {
+  label: "Add",
+  preset: "primary",
+  size: "small",
+  disabled: false
+};

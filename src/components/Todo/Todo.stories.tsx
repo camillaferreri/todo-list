@@ -5,10 +5,16 @@ import { Todo } from '.';
 export default {
   title: 'Todo',
   component: Todo,
+  onSelect: { control: false },
 };
 
 const Template: ComponentStory<typeof Todo> = ({ isHighPriority, checked, text, ...rest }) => {
-  return <Todo isHighPriority={isHighPriority} checked={checked} text={text} {...rest} />;
+  return <Todo 
+    isHighPriority={isHighPriority} 
+    checked={checked} 
+    text={text} 
+    {...rest} 
+  />;
 };
 
 export const ExampleStory = Template.bind({});

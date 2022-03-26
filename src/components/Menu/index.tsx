@@ -4,7 +4,7 @@ import { useTodos } from "../../context/todos"
 import { menu as menuData } from "../../data/menu"
 
 import { Badge } from "../Badge"
-import { IconType } from "../Icon"
+import { IconType } from "../Icon/Icon.types"
 import { MenuItem } from "../MenuItem"
 
 import "./Menu.scss"

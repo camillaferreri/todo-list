@@ -1,18 +1,10 @@
-import React, { ReactChild } from "react";
 import { Link } from "react-router-dom"
 
+import { MenuItemProps } from "./MenuItem.types";
+
 import { Icon } from "../Icon"
-import { IconType } from "../Icon"
 
 import "./MenuItem.scss"
-
-interface MenuItemProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
-  url: string;
-  icon: IconType;
-  label: string;
-  selected?: boolean;
-  children?: ReactChild
-}
 
 export const MenuItem = ({ url, label, icon, selected, className = '', children, ...rest }: MenuItemProps) => {
 

@@ -1,12 +1,20 @@
-import React from 'react';
+import { ComponentStory } from '@storybook/react';
 
 import { NewTaskModal } from '.';
 
 export default {
   title: 'NewTaskModal',
   component: NewTaskModal,
+  argTypes: {
+    onClose: { control: false },
+    open: { control: false },
+  }
 };
 
-// export const AddPrimary = () => <NewTaskModal>Add</NewTaskModal>;
-// export const AddDisabled = () => <NewTaskModal>Add</NewTaskModal>;
-// export const AddHover = () => <NewTaskModal >Add</NewTaskModal>;
+const Template: ComponentStory<typeof NewTaskModal> = ({  ...rest }) => {
+  return <NewTaskModal open={true} {...rest} />;
+};
+
+export const ExampleStory = Template.bind({});
+ExampleStory.args= {
+};

@@ -1,11 +1,6 @@
-import { ReactChild } from "react"
+import { BadgeProps } from "./Badge.types"
 
 import "./Badge.scss"
-
-interface BadgeProps {
-  preset: 'white' | 'lightBlue';
-  children: ReactChild;
-}
 
 export const Badge = ({ preset, children }: BadgeProps) => {
   return (

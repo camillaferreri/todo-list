@@ -7,13 +7,9 @@ export default {
   component: Input,
 };
 
-const Template: ComponentStory<typeof Input> = ({ isHighPriority, checked, text, ...rest }) => {
-  return <Input isHighPriority={isHighPriority} checked={checked} text={text} {...rest} />;
+const Template: ComponentStory<typeof Input> = () => {
+  return <Input />;
 };
 
 export const ExampleStory = Template.bind({});
-ExampleStory.args= {
-  isHighPriority: false,
-  checked: false,
-  text: 'Test for latest changes on homepage',
-};
+ExampleStory.args= {};

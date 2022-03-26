@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom"
 import { menu as footerData } from "../../data/menu"
 
 import { FooterItem } from "../FooterItem"
-import { IconType } from "../Icon"
+import { IconType } from "../Icon/Icon.types"
 
 import "./Footer.scss"
 
