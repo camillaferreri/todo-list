@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+
+.Modal {
+  display: none;
+
+  &__main {
+    background-color: map-get($colors, "shape_dark");
+    border-radius: $border-radius;
+    position: fixed;
+    left: 35px;
+    right: 35px;
+    bottom: 60%;
+    transform: translateY(50%);
+  }
+
+  &__head {
+    font-size: map-get($font-size, "base");
+    font-weight: map-get($font-weight, "medium");
+    color: map-get($colors, "shape_light");
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 1px solid #1F2942;
+  }
+
+  &__body {
+    padding: 20px 25px;
+  }
+
+  &__footer {
+    padding: 10px 25px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 63px;
+    background-color: rgba(#020713, 0.9);
+  }
+}

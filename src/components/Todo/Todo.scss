@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.Todo {
+  background-color: map-get($colors, "shape_dark");
+  border-radius: $border-radius;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: transform 300ms ease-in-out;
+
+  p {
+    color: map-get($colors, "shape_light");
+    font-weight: map-get($font-weight, "semibold");
+    flex: 1 1 100%;
+  }
+  
+  .Icon {
+    opacity: 0;
+    color: map-get($colors, "dark_red");
+    transition: opacity 300ms 150ms ease-in-out;
+    cursor: pointer;
+  }
+  
+  &--checked {
+    p {
+      color: map-get($colors, "cta_disabled");
+      text-decoration: line-through;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.16);
+
+    .Icon {
+      opacity: 1;
+    }
+  }
+}

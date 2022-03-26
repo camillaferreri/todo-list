@@ -1,0 +1,28 @@
+@import "../../styles/variables.scss";
+
+.Input {
+  background-color: map-get($colors, "shape_dark");
+  border-radius: $border-radius;
+  padding: 10px 10px 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  &__priority {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 40px;
+
+    span {
+      font-size: map-get($font-size, "base-xs");
+      color: map-get($colors, "shape_light");
+      margin-right: 20px;
+      white-space: nowrap;
+    }
+  }
+
+  .Button {
+    margin-left: 20px;
+  }
+}

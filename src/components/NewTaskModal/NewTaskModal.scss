@@ -1,0 +1,20 @@
+@import "../../styles/variables.scss";
+
+.NewTaskModal {
+  input {
+    min-width: 100%;
+    display: block;
+  }
+
+  &__priority {
+    display: inline-flex;
+    align-items: center;
+
+    span {
+      font-size: map-get($font-size, "base-xs");
+      color: map-get($colors, "shape_light");
+      margin-right: 20px;
+      white-space: nowrap;
+    }
+  }
+}

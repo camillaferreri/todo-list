@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.Badge {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 2px 7px;
+  min-width: 20px;
+  height: 20px;
+  font-size: map-get($font-size, "base-xs");
+  margin-left: 10px;
+
+  &.white {
+    background-color: #fff;
+    color: #212944;
+  }
+    
+  &.lightBlue {
+    background-color: map-get($colors, "shape_light");
+    color: map-get($colors, "background");
+  }
+}

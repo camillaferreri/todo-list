@@ -1,0 +1,43 @@
+@import "../../styles/variables.scss";
+
+.Checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 20px;
+  min-height: 20px;
+  background-color: map-get($colors, "shape_dark");
+  border: 1px solid map-get($colors, "shape_light");
+  border-radius: 4px;
+  transition: background-color 250ms ease-in-out;
+  cursor: pointer;
+
+  &::before {
+    content: "\2713";
+    display: block;
+    opacity: 0;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: map-get($font-weight, "500");
+    font-size: 1rem;
+    transition: opacity 250ms ease-in-out;
+  }
+
+  &:hover {
+    background-color: #27334F;
+
+    &::before {
+      opacity: 0.1;
+    }
+  }
+
+  &:checked {
+    background-color: map-get($colors, "success");
+    border: 1px solid map-get($colors, "success");
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}

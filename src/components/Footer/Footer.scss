@@ -1,0 +1,17 @@
+@import "../../styles/variables.scss";
+
+.Footer {
+  background-color: map-get($colors, "shape_dark");
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 3px 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+}

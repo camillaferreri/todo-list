@@ -1,0 +1,51 @@
+@import "../../styles/variables.scss";
+
+.Button {
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+  text-transform: uppercase;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  font-family: 'Poppins';
+  font-size: map-get($font-size, "base-sm");
+  font-weight: map-get($font-weight, "medium");
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  &.small {
+    padding: 10px 20px;
+  }
+  
+  &.big {
+    padding: 20px 20px;
+  }
+  
+  &.success {
+    background-color: map-get($colors, "success");
+  }
+
+  &.primary {
+    color: map-get($colors, "shape_light");
+    background-color: map-get($colors, "cta_active");
+    
+    &:hover {
+      background-color: map-get($colors, "cta_hover");
+    }
+    
+    &:disabled {
+      background-color: #212944;
+      color: map-get($colors, "cta_disabled");
+    }
+  }
+
+  &.lighter {
+    background-color: #212944;
+  }
+
+  &.dark {
+    background-color: map-get($colors, "shape_dark");
+  }
+}

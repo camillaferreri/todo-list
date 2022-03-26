@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+
+.Toggle {
+  background-color: #212944;
+  height: 32px;
+  width: 60px;
+  display: inline-block;
+  position: relative;
+  border-radius: 17px;
+  transition: background-color 300ms ease-in-out;
+
+  &__slider {
+    background-color: map-get($colors, "cta_disabled");
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 3px;
+    transition: background-color 300ms ease-in-out, transform 300ms ease-in-out;
+  }
+
+  input {
+    -webkit-appearance: none;
+    appearance: none;
+
+    &:checked {
+      & + .Toggle__slider {
+        background-color: map-get($colors, "shape_light");
+        transform: translateX(105%);
+      }
+    }
+  }
+
+
+  &:hover, &:focus {
+    background-color: #27334F;
+  }
+  
+}

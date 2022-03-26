@@ -1,4 +1,19 @@
 @import "../../styles/variables.scss";
 
 .Home {
+  h1 {
+    color: map-get($colors, "shape_light");
+  }
+  
+  .NewTaskButton {
+    text-transform: none;
+    color: map-get($colors, "shape_light");
+    font-size: map-get($font-size, "base");
+    width: 100%;
+    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 330px;
+  }
 }

@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.PriorityDot {
+  min-width: 10px;
+  min-height: 10px;
+  max-width: 10px;
+  max-height: 10px;
+  border-radius: 10px;
+  background-color: map-get($colors, "cta_disabled");
+  margin: 10px;
+
+  &--high {
+    background-color: map-get($colors, "red");
+  }
+}

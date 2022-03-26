@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+
+.FooterItem {
+  border-radius: $border-radius;
+  padding: 10px 15px;
+  color: #A9C8E8;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  span {
+    margin-top: 5px;
+    font-size: map-get($font-size, "small");
+  }
+  
+  &--selected {
+    color: #fff;
+  }
+}

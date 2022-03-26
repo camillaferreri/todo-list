@@ -1,16 +1,29 @@
 $colors: (
-    "white": #ffffff,
-    "lightgray": #F8F9FA,
-    "darkgray": #4D546C,
-    "bluegray": #474E67,
-    "blue": #3F51F2,
-    "violet": #2F1F46,
+  "background": #202A43,
+  "cta_active": #4788C7,
+  "cta_hover": #74ACE2,
+  "cta_disabled": #425277,
+  "shape_dark": #141B2C,
+  "shape_light": #CBDDF0,
+  "success": #82C94E,
+  "red": #CD5050,
+  "dark_red": #CD5050,
 );
 
 $font-size: (
-    "base-xs": 12px,
-    "base": 16px,
-    "base-lg": 20px,
-    "large": 22px,
-    "large-lg": 30px,
+	"small": 8px,
+	"base-xs": 12px,
+	"base-sm": 14px,
+	"base": 16px,
+	"base-lg": 18px,
+	"large": 24px,
 );
+
+$font-weight: (
+  "regular": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+);
+
+$border-radius: 12px;

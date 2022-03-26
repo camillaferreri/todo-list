@@ -1,25 +1,67 @@
 @import "variables";
-@import "typography";
-@import "./pages/AdvancedAnalysis.scss";
+@import "./pages/Home.scss";
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
 
 body {
-    font-size: 16px;
-    font-family: "Plus Jakarta Display", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    background-color: map-get($colors, "lightgray");
-    padding-top: 90px;
-    overflow-x: hidden;
+	font-size: map-get($font-size, "base-sm");
+	font-family: 'Poppins', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background-color: map-get($colors, "background");
+	padding-top: 90px;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+
+	@media screen and (min-width: 1200px) {
+		font-size: 16px;
+	}
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 1570px;
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 0 35px;
+	
+	@media screen and (min-width: 1200px) {
+		padding: 0;
+	}
+}
+
+h1 {
+	font-size: map-get($font-size, "large");
+	font-weight: map-get($font-weight, "bold");
 }
 
 h2 {
-    font-size: map-get($font-size, "large");
+	font-size: map-get($font-size, "base");
+	font-weight: map-get($font-weight, "medium");
+	color: map-get($colors, "shape_light");
+	margin: 40px 0 10px;
 }
 
-h4 {
-    font-size: map-get($font-size, "base-lg");
+p {
+	margin: 0;
+}
+
+input[type="text"] {
+	background-color: map-get($colors, "shape_dark");
+	border: none;
+	font-family: 'Poppins';
+	font-weight: map-get($font-weight, "medium");
+	font-size: 1rem;
+	color: map-get($colors, "shape_light");
+	flex: 1 1 100%;
+	
+	&::placeholder {
+		color: map-get($colors, "cta_disabled");
+	}
+
+	&:focus {
+		outline: none;
+	}
 }

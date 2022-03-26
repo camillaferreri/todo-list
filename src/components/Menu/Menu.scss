@@ -1,0 +1,33 @@
+@import "../../styles/variables.scss";
+
+.Menu {
+  display: none;
+  
+  @media screen and (min-width: 1200px) {
+    background-color: map-get($colors, "shape_dark");
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 330px;
+    padding: 40px;
+
+    h1 {
+      color: #fff;
+      margin: 0 20px 100px;
+      display: block;
+    }
+
+    &__mainWrapper {
+      display: flex;
+      flex: 1 1 100%;
+      flex-direction: column;
+    }
+
+    .MenuItemSettings {
+      margin-bottom: 0;
+    }
+  }
+}

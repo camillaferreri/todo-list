@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+
+.MenuItem {
+  border-radius: $border-radius;
+  padding: 15px 20px;
+  color: #A9C8E8;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 10px;
+
+  &__text {
+    font-weight: map-get($font-weight, "semibold");
+    margin-left: 10px;
+    flex: 1 1 50%;
+  }
+
+  &--selected {
+    color: #fff;
+    background-color: #212944;
+  }
+}

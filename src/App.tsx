@@ -1,19 +1,23 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header/Header";
+import { TodosProvider } from "./context/todos";
+
+import { Footer } from "./components/Footer";
+import { Menu } from "./components/Menu";
 import Home from "./pages/Home";
-
-import './App.scss';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <TodosProvider>
+          <Menu />
+          <Footer />
+          
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </TodosProvider>
       </Router>
     </div>
   );

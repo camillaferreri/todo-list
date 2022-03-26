@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.TaskModal {
+  .Modal__head {
+    padding: 15px 25px 15px 15px;
+
+    div {
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+
+  .Modal__body {
+    color: map-get($colors, "shape_light");
+    font-weight: map-get($font-weight, "medium");
+    font-size: map-get($font-size, "base-lg");
+  }
+
+  .Modal__footer {
+    .TrashButton {
+      color: #CE5151;
+      padding: 10px;
+      display: inline-flex;
+    }
+  }
+}
